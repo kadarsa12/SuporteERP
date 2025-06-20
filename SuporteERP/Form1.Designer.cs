@@ -3,6 +3,9 @@ namespace SuporteERPForms
     partial class Form1
     {
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblProblema;
+        private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.TextBox txtProblema;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.RichTextBox txtResultado;
@@ -15,46 +18,92 @@ namespace SuporteERPForms
             btnBuscar = new Button();
             txtResultado = new RichTextBox();
             flowImagens = new FlowLayoutPanel();
+            lblTitulo = new Label();
+            lblProblema = new Label();
+            lblResultado = new Label();
             SuspendLayout();
             // 
+            // lblTitulo
+            //
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(196, 30);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Busca de Soluções";
+            //
+            // lblProblema
+            //
+            lblProblema.AutoSize = true;
+            lblProblema.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            lblProblema.Location = new Point(12, 50);
+            lblProblema.Name = "lblProblema";
+            lblProblema.Size = new Size(145, 19);
+            lblProblema.TabIndex = 1;
+            lblProblema.Text = "Descreva o problema:";
+            //
             // txtProblema
-            // 
-            txtProblema.Location = new Point(12, 12);
+            //
+            txtProblema.Font = new Font("Segoe UI", 10F);
+            txtProblema.Location = new Point(12, 72);
             txtProblema.Multiline = true;
             txtProblema.Name = "txtProblema";
-            txtProblema.Size = new Size(460, 100);
-            txtProblema.TabIndex = 0;
-            // 
+            txtProblema.Size = new Size(460, 80);
+            txtProblema.TabIndex = 2;
+            //
             // btnBuscar
-            // 
-            btnBuscar.Location = new Point(12, 120);
+            //
+            btnBuscar.BackColor = Color.MidnightBlue;
+            btnBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnBuscar.ForeColor = Color.White;
+            btnBuscar.Location = new Point(12, 158);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(75, 23);
-            btnBuscar.TabIndex = 1;
+            btnBuscar.Size = new Size(120, 35);
+            btnBuscar.TabIndex = 3;
             btnBuscar.Text = "Buscar Solução";
             btnBuscar.Click += btnBuscar_Click;
-            // 
+            //
             // txtResultado
-            // 
-            txtResultado.Location = new Point(12, 149);
+            //
+            txtResultado.Font = new Font("Segoe UI", 10F);
+            txtResultado.Location = new Point(12, 217);
             txtResultado.Name = "txtResultado";
-            txtResultado.Size = new Size(460, 116);
-            txtResultado.TabIndex = 2;
+            txtResultado.ReadOnly = true;
+            txtResultado.Size = new Size(460, 110);
+            txtResultado.TabIndex = 5;
             txtResultado.Text = "";
-            // 
+            //
             // flowImagens
-            // 
+            //
             flowImagens.AutoScroll = true;
-            flowImagens.Location = new Point(12, 271);
+            flowImagens.BackColor = Color.WhiteSmoke;
+            flowImagens.Location = new Point(12, 333);
             flowImagens.Name = "flowImagens";
             flowImagens.Size = new Size(460, 120);
-            flowImagens.TabIndex = 3;
-            // 
+            flowImagens.TabIndex = 6;
+            //
+            // lblResultado
+            //
+            lblResultado.AutoSize = true;
+            lblResultado.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            lblResultado.Location = new Point(12, 195);
+            lblResultado.Name = "lblResultado";
+            lblResultado.Size = new Size(66, 19);
+            lblResultado.TabIndex = 4;
+            lblResultado.Text = "Resultado:";
+            //
             // Form1
-            // 
-            ClientSize = new Size(506, 395);
+            //
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
+            ClientSize = new Size(506, 465);
+            Controls.Add(lblTitulo);
+            Controls.Add(lblProblema);
             Controls.Add(txtProblema);
             Controls.Add(btnBuscar);
+            Controls.Add(lblResultado);
             Controls.Add(txtResultado);
             Controls.Add(flowImagens);
             Name = "Form1";
